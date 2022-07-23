@@ -1,0 +1,30 @@
+.list {
+  display: flex;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.link {
+  padding: 32px 16px;
+
+  color: #1d1f22;
+  opacity: 1;
+  transition: opacity 250ms linear;
+}
+
+.link:hover,
+.link:focus {
+  opacity: 0.6;
+  transition: opacity 250ms linear;
+}
+
+.link--active {
+  border-bottom: 2px solid #5ece7b;
+
+  color: #5ece7b;
+  font-weight: 600;
+}

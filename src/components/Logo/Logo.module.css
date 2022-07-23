@@ -1,0 +1,13 @@
+.logo {
+  margin-left: auto;
+  margin-right: 500px;
+
+  transform: rotate(0deg);
+  transition: transform 250ms linear;
+  cursor: pointer;
+}
+
+.logo:hover,
+.logo:focus {
+  transform: rotate(-180deg);
+}

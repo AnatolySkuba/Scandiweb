@@ -1,0 +1,57 @@
+.container {
+  position: relative;
+  display: inline-block;
+
+  margin-right: 22px;
+}
+
+.button {
+  width: 38px;
+  padding: 0;
+  border: none;
+
+  background-color: #fff;
+  color: #1d1f22;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.button--open {
+  background-image: url('../../images/arrow-up.svg');
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.button--closed {
+  background-image: url('../../images/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+
+  background-color: #fff;
+
+  width: 114px;
+  margin-top: 7px;
+  border: none;
+  box-shadow: 0px 4px 35px 0px #a8acb030;
+}
+
+.dropdown li {
+  padding: 20px 15px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.dropdown li:hover {
+  background-color: rgba(57, 55, 72, 0.22);
+  cursor: pointer;
+}
