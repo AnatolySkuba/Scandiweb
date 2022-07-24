@@ -1,2 +1,1 @@
-# Test task
-Open [Figma](https://www.figma.com/file/MSyCAqVy1UgNap0pvqH6H3/Junior-Frontend-Test-Designs-Public) to view it in the browser.
+Teste técnico realizado pela posição de front end jr na ScandiWeb. Api:https://github.com/scandiweb/junior-react-endpoint Design: https://www.figma.com/file/MSyCAqVy1UgNap0pvqH6H3/Junior-Frontend-Test-Designs-(Public)?node-id=0%3A1
