@@ -1,25 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import App from "./component/App";
 import client from "./Graphql/apolloClient";
 import { Provider } from "react-redux";
-import {store,persistor} from "./store";
+import { store, persistor } from "./store";
 import { PersistGate } from "redux-persist/integration/react";
 
 import { ApolloProvider } from "@apollo/client";
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
-
-    <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <App />
-      </PersistGate>
-    </Provider>
-  </ApolloProvider>,
-  document.getElementById("root")
+	<ApolloProvider client={client}>
+		<Provider store={store}>
+			<PersistGate loading={null} persistor={persistor}>
+				<App />
+			</PersistGate>
+		</Provider>
+	</ApolloProvider>,
+	document.getElementById("root"),
 );
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

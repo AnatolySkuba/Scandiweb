@@ -21,17 +21,16 @@ class Categories extends Component {
 		this.fetchQuery();
 	}
 
-	// componentDidUpdate(prevProps, prevState) {
-	// 	if (prevProps.category !== this.props.category) {
-	// 		this.fetchQuery();
-	// 	}
-	// }
+	componentDidUpdate(prevProps, prevState) {
+		if (prevProps.category !== this.props.category) {
+			this.fetchQuery();
+		}
+	}
 
 	getSome(event) {
 		const { sendCategory } = this.props;
 		this.setState({ category: event.target.textContent });
 		sendCategory(event.target.textContent);
-		this.fetchQuery();
 	}
 
 	async fetchQuery() {
@@ -43,20 +42,13 @@ class Categories extends Component {
 			categories: [...result.data.categories],
 		});
 	}
+
 	render() {
 		return (
 			<Container>
 				{this.state.categories &&
-					this.state.categories.map(({ name }, id) => (
-						<StyledLink
-							to={`/category/${name}`}
-							activeStyle={{
-								color: "#5ECE7B",
-								borderBottom: "2px solid #5ECE7B",
-							}}
-							onClick={this.getSome}
-							key={name}
-						>
+					this.state.categories.map(({ name }) => (
+						<StyledLink to={`/category/${name}`} onClick={this.getSome} key={name}>
 							{name}
 						</StyledLink>
 					))}
