@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/Scandiweb/static/css/main.073c9b0a.css",
-    "main.js": "/Scandiweb/static/js/main.18966b86.js",
-    "static/js/787.fedc83dc.chunk.js": "/Scandiweb/static/js/787.fedc83dc.chunk.js",
-    "static/media/logo.svg": "/Scandiweb/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/Scandiweb/index.html",
-    "main.073c9b0a.css.map": "/Scandiweb/static/css/main.073c9b0a.css.map",
-    "main.18966b86.js.map": "/Scandiweb/static/js/main.18966b86.js.map",
-    "787.fedc83dc.chunk.js.map": "/Scandiweb/static/js/787.fedc83dc.chunk.js.map"
+    "main.css": "/static/css/main.de32c9cb.css",
+    "main.js": "/static/js/main.a5c6de34.js",
+    "CategoryPage.js": "/static/js/CategoryPage.a48f2474.chunk.js",
+    "ProductPage.js": "/static/js/ProductPage.2c5286d9.chunk.js",
+    "CartPage.js": "/static/js/CartPage.68efa16d.chunk.js",
+    "static/media/logo.svg": "/static/media/logo.5d12b4faf427c0c1570ba07ef816045d.svg",
+    "static/media/cart.svg": "/static/media/cart.a9875b99a8cd4fcabc1b6f2e560b0271.svg",
+    "index.html": "/index.html",
+    "static/media/arrow.svg": "/static/media/arrow.435ec0614730b3e210bfb7b105fc7a9b.svg",
+    "main.de32c9cb.css.map": "/static/css/main.de32c9cb.css.map",
+    "main.a5c6de34.js.map": "/static/js/main.a5c6de34.js.map",
+    "CategoryPage.a48f2474.chunk.js.map": "/static/js/CategoryPage.a48f2474.chunk.js.map",
+    "ProductPage.2c5286d9.chunk.js.map": "/static/js/ProductPage.2c5286d9.chunk.js.map",
+    "CartPage.68efa16d.chunk.js.map": "/static/js/CartPage.68efa16d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.18966b86.js"
+    "static/css/main.de32c9cb.css",
+    "static/js/main.a5c6de34.js"
   ]
 }
