@@ -1,1 +1,1 @@
-export { default } from "./Header.component.js";
+export { default } from "./Header.jsx";

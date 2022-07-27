@@ -1,8 +1,9 @@
 import { PureComponent } from "react";
 
+import withRouter from "route/withRouter";
 import client from "query/apolloClient";
 import GET_CATEGORIES from "query/Categories.query";
-import { Ul, Link } from "./Navigation.styled";
+import { List, Link } from "./Navigation.styled";
 
 export class Navigation extends PureComponent {
 	state = { categories: [] };
@@ -26,16 +27,18 @@ export class Navigation extends PureComponent {
 
 		return (
 			<nav>
-				<Ul>
+				<List>
 					{categories?.map(({ name }, index) => (
 						<li key={index}>
-							<Link to={`/category/${name}`}>{name}</Link>
+							<Link to={`/category/${name}`} location={this.props.router.location.pathname}>
+								{name}
+							</Link>
 						</li>
 					))}
-				</Ul>
+				</List>
 			</nav>
 		);
 	}
 }
 
-export default Navigation;
+export default withRouter(Navigation);

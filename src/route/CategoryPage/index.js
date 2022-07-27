@@ -1,1 +1,1 @@
-export { default } from "./CategoryPage.container";
+export { default } from "./CategoryPage";

@@ -1,1 +1,1 @@
-export { default } from "./Currency.component";
+export { default } from "./Currency";

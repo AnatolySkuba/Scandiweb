@@ -23,7 +23,7 @@ export class Currency extends PureComponent {
 	}
 
 	render() {
-		// console.log(this.state, this.props);
+		console.log(this.state);
 		const { currencies } = this.state;
 		return (
 			<Container>

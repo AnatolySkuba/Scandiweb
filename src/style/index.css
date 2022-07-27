@@ -2,8 +2,7 @@
 	box-sizing: border-box;
 }
 
-html,
-body {
+html {
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -11,4 +10,12 @@ body {
 	font-family: "Raleway", sans-serif;
 	overflow-x: hidden;
 	text-decoration: none;
+}
+
+body {
+	margin: 0 auto;
+	max-width: 1440px;
+	height: 100%;
+	text-decoration: none;
+	padding: 0 calc(101 / 1440 * 100vw);
 }
