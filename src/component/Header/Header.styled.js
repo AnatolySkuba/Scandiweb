@@ -10,4 +10,5 @@ export const Container = styled.header`
 	display: flex;
 	align-items: center;
 	background-color: white;
+	z-index: 111;
 `;

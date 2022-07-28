@@ -18,9 +18,15 @@ body {
 	height: 100%;
 	text-decoration: none;
 	padding: 0 calc(101 / 1440 * 100vw);
+	caret-color: transparent !important;
 }
 
 ul {
 	list-style-type: none;
 	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
 }

@@ -36,13 +36,20 @@ export class CategoryPageContainer extends PureComponent {
 
 	render() {
 		const { products } = this.state;
-		// console.log(products);
 		return (
 			<>
 				<CategoryName>{this.categoryName()}</CategoryName>
 				<ProductList>
-					{products?.map(({ id, gallery, name, prices }) => (
-						<ProductListItem key={id} gallery={gallery[0]} name={name} prices={prices} />
+					{products?.map(({ id, gallery, name, brand, prices, inStock }) => (
+						<ProductListItem
+							key={id}
+							id={id}
+							gallery={gallery[0]}
+							brand={brand}
+							name={name}
+							prices={prices}
+							inStock={inStock}
+						/>
 					))}
 				</ProductList>
 			</>

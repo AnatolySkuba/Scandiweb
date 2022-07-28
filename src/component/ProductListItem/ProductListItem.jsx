@@ -1,20 +1,46 @@
 import { PureComponent } from "react";
+import { connect } from "react-redux";
 
-import { ProductItem, ProductLink, ProductImage, ProductName } from "./ProductListItem.styled";
+import {
+	ProductItem,
+	ProductLink,
+	ProductImage,
+	ProductName,
+	ProductPrice,
+	OutOfStock,
+} from "./ProductListItem.styled";
+
+const mapStateToProps = state => ({
+	currentCurrency: state.cart.currentCurrency,
+});
 
 export class ProductListItem extends PureComponent {
 	render() {
-		const { id, gallery, name, prices } = this.props;
-		// console.log(this.props);
+		const { id, gallery, brand, name, prices, inStock, currentCurrency } = this.props;
+		const price = { symbol: "", amount: 0 };
+		prices.forEach(({ currency, amount }) => {
+			if (currency.symbol === currentCurrency) {
+				price.symbol = currentCurrency;
+				price.amount = amount;
+			}
+		});
+
 		return (
-			<ProductItem>
+			<ProductItem inStock={inStock}>
 				<ProductLink to={`/product/${id}`}>
 					<ProductImage src={gallery} />
-					<ProductName>{name}</ProductName>
+					{!inStock && <OutOfStock>OUT OF STOCK</OutOfStock>}
+					<ProductName>
+						{brand} {name}
+					</ProductName>
+					<ProductPrice>
+						{price.symbol}
+						{price.amount}
+					</ProductPrice>
 				</ProductLink>
 			</ProductItem>
 		);
 	}
 }
 
-export default ProductListItem;
+export default connect(mapStateToProps)(ProductListItem);

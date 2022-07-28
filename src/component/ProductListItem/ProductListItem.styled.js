@@ -6,6 +6,7 @@ export const ProductItem = styled.li`
 	max-width: 386px;
 	height: calc(444 / 1440 * 100vw);
 	max-height: 444px;
+	opacity: ${({ inStock }) => (inStock ? "1" : "0.5")};
 	@media screen and (max-width: calc((270 / 386  * 242 + 386 * 2) * 1px )) {
 		width: calc(386 / calc(270 / 386 * 242 + 386 * 2) * 100vw);
 		height: calc(444 / calc(270 / 386 * 242 + 386 * 2) * 100vw);
@@ -21,6 +22,7 @@ export const ProductItem = styled.li`
 `;
 
 export const ProductLink = styled(Link)`
+	position: relative;
 	display: block;
 	width: calc(386 / 1440 * 100vw);
 	max-width: 386px;
@@ -80,5 +82,45 @@ export const ProductName = styled.h3`
 	@media screen and (min-width: 1440px) {
 		font-size: 18px;
 		margin: 24px 0 0 0;
+	}
+`;
+
+export const ProductPrice = styled.p`
+	font-style: normal;
+	font-weight: 500;
+	font-size: calc(18 / 1440 * 100vw);
+	line-height: 160%;
+	color: #1d1f22;
+	margin: 0;
+	@media screen and (max-width: calc((270 / 386  * 242 + 386 * 2) * 1px )) {
+		font-size: calc(18 / calc(270 / 386 * 242 + 386 * 2) * 100vw);
+	}
+	@media screen and (max-width: calc((270 / 386  * 202 + 386) * 1px )) {
+		font-size: calc(18 / calc(270 / 386 * 202 + 386) * 100vw);
+	}
+	@media screen and (min-width: 1440px) {
+		font-size: 18px;
+	}
+`;
+
+export const OutOfStock = styled.p`
+	position: absolute;
+	left: 50%;
+	top: calc(338 / 444 * 50%);
+	transform: translate(-50%, -50%);
+	font-style: normal;
+	font-weight: 400;
+	font-size: calc(24 / 1440 * 100vw);
+	line-height: 38.4px;
+	color: #1d1f22;
+	margin: 0;
+	@media screen and (max-width: calc((270 / 386  * 242 + 386 * 2) * 1px )) {
+		font-size: calc(24 / calc(270 / 386 * 242 + 386 * 2) * 100vw);
+	}
+	@media screen and (max-width: calc((270 / 386  * 202 + 386) * 1px )) {
+		font-size: calc(24 / calc(270 / 386 * 202 + 386) * 100vw);
+	}
+	@media screen and (min-width: 1440px) {
+		font-size: 24px;
 	}
 `;
