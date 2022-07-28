@@ -16,7 +16,6 @@ export const ProductList = styled.ul`
 	grid-gap: calc(40 / 1440 * 100vw);
 	padding: 0;
 	margin: 0;
-	list-style-type: none;
 	@media screen and (max-width: calc((270 / 386  * 242 + 386 * 2) * 1px )) {
 		grid-template-columns: repeat(2, calc(386 / calc(270 / 386 * 242 + 386 * 2) * 100vw));
 		grid-gap: calc(40 / calc(270 / 386 * 242 + 386 * 2) * 100vw);

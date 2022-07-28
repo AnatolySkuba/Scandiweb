@@ -19,3 +19,8 @@ body {
 	text-decoration: none;
 	padding: 0 calc(101 / 1440 * 100vw);
 }
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
