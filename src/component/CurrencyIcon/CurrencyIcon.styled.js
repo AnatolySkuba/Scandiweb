@@ -24,13 +24,10 @@ export const DropdownList = styled.ul`
 	position: absolute;
 	top: 100%;
 	left: -12.5px;
-	z-index: 1;
-
+	z-index: 2;
 	background-color: #fff;
-
 	width: 114px;
 	margin-top: 7.5px;
-	border: none;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 `;
 

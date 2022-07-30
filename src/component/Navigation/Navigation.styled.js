@@ -3,27 +3,24 @@ import { NavLink } from "react-router-dom";
 
 export const List = styled.ul`
 	display: flex;
-	margin: 0;
-	padding: 0;
 	cursor: pointer;
 `;
 
 export const Link = styled(NavLink)`
 	padding: 4px 1vw 32px 1vw;
-	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 16px;
-	font-style: normal;
 	font-weight: 400;
 	letter-spacing: 0px;
-	color: ${({ location, children }) => (location === "/" && children === "all" ? "#5ece7b" : "#1d1f22")};
-	border-bottom: ${({ location, children }) => (location === "/" && children === "all" ? "2px solid #5ece7b" : "")};
-	font-style: normal;
+	color: ${({ location, children }) =>
+		location === "/" && children === "all" ? "var(--accent-color)" : "var(--main-text-color)"};
+	border-bottom: ${({ location, children }) =>
+		location === "/" && children === "all" ? "2px solid var(--accent-color)" : ""};
 	&.active {
-		color: #5ece7b;
-		border-bottom: 2px solid #5ece7b;
+		color: var(--accent-color);
+		border-bottom: 2px solid var(--accent-color);
 	}
 	&:hover {
-		color: #5ece7b;
+		color: var(--accent-color);
 	}
 `;

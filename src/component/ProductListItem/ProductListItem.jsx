@@ -17,11 +17,10 @@ const mapStateToProps = state => ({
 export class ProductListItem extends PureComponent {
 	render() {
 		const { id, gallery, brand, name, prices, inStock, currentCurrency } = this.props;
-		const price = { symbol: "", amount: 0 };
+		let currentAmount;
 		prices.forEach(({ currency, amount }) => {
 			if (currency.symbol === currentCurrency) {
-				price.symbol = currentCurrency;
-				price.amount = amount;
+				currentAmount = amount;
 			}
 		});
 
@@ -34,8 +33,8 @@ export class ProductListItem extends PureComponent {
 						{brand} {name}
 					</ProductName>
 					<ProductPrice>
-						{price.symbol}
-						{price.amount}
+						{currentCurrency}
+						{currentAmount}
 					</ProductPrice>
 				</ProductLink>
 			</ProductItem>

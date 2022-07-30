@@ -4,16 +4,16 @@ export const cartSlice = createSlice({
 	name: "cart",
 	initialState: {
 		currentCurrency: "$",
+		products: [],
 	},
 	reducers: {
 		setCurrency(state, action) {
 			state.currentCurrency = action.payload;
 		},
-		setIsSignedIn(state, action) {
-			state.user = action.payload.user;
-			state.token = action.payload.token;
+		addToCart(state, action) {
+			state.products = action.payload;
 		},
-		setIsLoggedIn(state, action) {
+		removeFromCart(state, action) {
 			state.user = action.payload.user;
 			state.token = action.payload.token;
 		},
@@ -24,4 +24,4 @@ export const cartSlice = createSlice({
 	},
 });
 
-export const { setCurrency, setIsSignedIn, setIsLoggedIn, logOutState } = cartSlice.actions;
+export const { setCurrency, addToCart, removeFromCart, logOutState } = cartSlice.actions;

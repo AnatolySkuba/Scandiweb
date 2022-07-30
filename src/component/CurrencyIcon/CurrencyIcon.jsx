@@ -4,20 +4,20 @@ import { connect } from "react-redux";
 import client from "query/apolloClient";
 import GET_CURRENCIES from "query/Currencies.query";
 import { setCurrency } from "store/cartSlice";
-import { Container, Icon, ArrowSvg, DropdownList, DropdownItem, BackDrop } from "./Currency.styled";
+import { Container, Icon, ArrowSvg, DropdownList, DropdownItem, BackDrop } from "./CurrencyIcon.styled";
 
 const mapStateToProps = state => ({
 	currentCurrency: state.cart.currentCurrency,
 });
 
-export class Currency extends PureComponent {
+export class CurrencyIcon extends PureComponent {
 	state = { currencies: [], currency: "", dropdown: false };
 
 	componentDidMount() {
 		this.fetchQuery();
 	}
 
-	toggleModal() {
+	toggleDropdown() {
 		this.setState(state => ({ dropdown: !state.dropdown }));
 	}
 
@@ -40,7 +40,7 @@ export class Currency extends PureComponent {
 		const { currencies, currency, dropdown } = this.state;
 
 		return (
-			<Container onClick={() => this.toggleModal()}>
+			<Container onClick={() => this.toggleDropdown()}>
 				<Icon>{currency || this.props.currentCurrency}</Icon>
 				<ArrowSvg dropdown={`${dropdown}`} />
 				{dropdown && (
@@ -60,4 +60,4 @@ export class Currency extends PureComponent {
 	}
 }
 
-export default connect(mapStateToProps, { setCurrency })(Currency);
+export default connect(mapStateToProps, { setCurrency })(CurrencyIcon);

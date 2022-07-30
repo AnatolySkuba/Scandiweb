@@ -1,32 +1,29 @@
+:root {
+	--main-text-color: #1d1f22;
+	--accent-color: #5ece7b;
+}
 * {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
+	color: var(--main-text-color);
+	list-style-type: none;
+
+	font-family: "Raleway", sans-serif;
+	font-style: normal;
+	text-decoration: none;
 }
 
 html {
-	margin: 0;
-	padding: 0;
 	width: 100%;
 	height: 100%;
-	font-family: "Raleway", sans-serif;
 	overflow-x: hidden;
-	text-decoration: none;
 }
 
 body {
 	margin: 0 auto;
+	padding: 0 calc(101 / 1440 * 100vw);
 	max-width: 1440px;
 	height: 100%;
-	text-decoration: none;
-	padding: 0 calc(101 / 1440 * 100vw);
 	caret-color: transparent !important;
-}
-
-ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-}
-
-li {
-	list-style-type: none;
 }
