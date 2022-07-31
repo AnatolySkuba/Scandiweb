@@ -5,7 +5,7 @@ import withRouter from "route/withRouter";
 import client from "query/apolloClient";
 import GET_PRODUCT from "query/Product.query";
 import { addToCart } from "store/cartSlice";
-import ProductAttributes from "component/ProductAttributes";
+import ProductAttributes from "component/ProductPageAttributes";
 import {
 	Container,
 	GalleryList,
@@ -97,6 +97,7 @@ export class ProductPage extends PureComponent {
 						attributes: product.attributes,
 						currentAttributes: currentAttributes,
 						prices: product.prices,
+						image: product.gallery[0],
 						quantity: 1,
 				  });
 
@@ -113,6 +114,7 @@ export class ProductPage extends PureComponent {
 					attributes: product.attributes,
 					currentAttributes: currentAttributes,
 					prices: product.prices,
+					image: product.gallery[0],
 					quantity: 1,
 				});
 
@@ -124,12 +126,7 @@ export class ProductPage extends PureComponent {
 		const { gallery, brand, name, attributes, prices, description } = this.state.product;
 		const { currentCurrency } = this.props;
 		const { currentImage, currentAttributes } = this.state;
-		let currentAmount;
-		prices?.forEach(({ currency, amount }) => {
-			if (currency.symbol === currentCurrency) {
-				currentAmount = amount;
-			}
-		});
+		const currentAmount = prices?.find(({ currency }) => currency.symbol === currentCurrency);
 
 		return (
 			<Container>
@@ -152,7 +149,7 @@ export class ProductPage extends PureComponent {
 					<Price>Price:</Price>
 					<PriceValue>
 						{currentCurrency}
-						{currentAmount}
+						{currentAmount?.amount}
 					</PriceValue>
 					<Button onClick={() => this.addToCart()}>ADD TO CART</Button>
 					<Description>{description}</Description>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { ReactComponent as svg } from "style/icons/cart.svg";
 
 export const Container = styled.div`
@@ -53,8 +54,15 @@ export const Name = styled.p`
 
 export const Products = styled.ul`
 	margin-bottom: 32px;
+	width: 293px;
+	height: 420px;
+	contain: content;
+	display: block;
+	overflow: auto;
+	::-webkit-scrollbar {
+		display: none;
+	}
 `;
-export const Product = styled.li``;
 
 export const Total = styled.p`
 	display: flex;
@@ -71,13 +79,22 @@ export const TotalPrice = styled.span`
 	line-height: 160%;
 `;
 
-export const ViewBag = styled.button`
+export const Buttons = styled.div`
+	display: flex;
+	width: 292px;
+	height: 43px;
+	font-weight: 600;
+`;
+
+export const ViewBag = styled(Link)`
+	display: block;
 	margin-right: 12px;
 	width: 140px;
 	height: 43px;
 	font-weight: 600;
 	font-size: 14px;
-	line-height: 120%;
+	text-align: center;
+	line-height: 43px;
 	border: 1px solid var(--main-text-color);
 	background-color: white;
 	cursor: pointer;
@@ -105,5 +122,6 @@ export const BackDrop = styled.div`
 	background: rgba(57, 55, 72, 0.22);
 	visibility: ${({ dropdown }) => (dropdown ? "" : "hidden")};
 	cursor: default;
+	z-index: 1;
 	}
 `;

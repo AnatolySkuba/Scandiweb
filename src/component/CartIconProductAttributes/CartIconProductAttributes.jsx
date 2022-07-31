@@ -1,10 +1,10 @@
 import { PureComponent } from "react";
 
-import { Attributes, Attribute, Name, Items, Item, ItemSwatch } from "./ProductAttributes.styled";
+import { Attributes, Attribute, Name, Items, Item, ItemSwatch } from "./CartIconProductAttributes.styled";
 
-export class ProductAttributes extends PureComponent {
+export class CartIconProductAttributes extends PureComponent {
 	render() {
-		const { attributes, currentAttributes, handleClickAttribute } = this.props;
+		const { attributes, currentAttributes } = this.props;
 
 		return (
 			<Attributes>
@@ -20,16 +20,9 @@ export class ProductAttributes extends PureComponent {
 										value={value}
 										displayValue={displayValue}
 										currentAttributes={currentAttributes}
-										onClick={() => handleClickAttribute(name, value)}
 									/>
 								) : (
-									<Item
-										key={id}
-										name={name}
-										value={value}
-										currentAttributes={currentAttributes}
-										onClick={() => handleClickAttribute(name, value)}
-									>
+									<Item key={id} name={name} value={value} currentAttributes={currentAttributes}>
 										{value}
 									</Item>
 								),
@@ -42,4 +35,4 @@ export class ProductAttributes extends PureComponent {
 	}
 }
 
-export default ProductAttributes;
+export default CartIconProductAttributes;

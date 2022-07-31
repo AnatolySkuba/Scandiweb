@@ -1,8 +1,7 @@
 import { PureComponent } from "react";
 import { connect } from "react-redux";
 
-import client from "query/apolloClient";
-import GET_PRODUCT from "query/Product.query";
+import CartIconProduct from "component/CartIconProduct";
 import {
 	Container,
 	CartSvg,
@@ -12,9 +11,9 @@ import {
 	DropdownProducts,
 	Name,
 	Products,
-	Product,
 	Total,
 	TotalPrice,
+	Buttons,
 	ViewBag,
 	CheckOut,
 } from "./CartIcon.styled";
@@ -34,27 +33,60 @@ export class CartIcon extends PureComponent {
 	render() {
 		const { currentCurrency, products } = this.props;
 		const { dropdown } = this.state;
-		console.log(this.props);
+
+		const totalAmount = products.reduce((total, product) => {
+			product.prices.forEach(({ currency, amount }) => {
+				if (currency.symbol === currentCurrency) {
+					total = total + amount * product.quantity;
+				}
+			});
+			return total;
+		}, 0);
+
+		const totalProducts = products.reduce((total, product) => {
+			return total + product.quantity;
+		}, 0);
 
 		return (
 			<Container onClick={() => this.toggleDropdown()}>
 				<CartSvg />
-				<Counter>{products.length}</Counter>
+				<Counter>{totalProducts}</Counter>
 				{dropdown && (
 					<>
 						<BackDrop dropdown={dropdown} />
-						<Dropdown>
+						<Dropdown onClick={() => this.toggleDropdown()}>
 							<DropdownProducts>
-								<Name>My Bag, {products.length} items</Name>
+								<Name>My Bag, {totalProducts} items</Name>
 								<Products>
-									<Product></Product>
+									{products.map(
+										({ id, brand, name, prices, attributes, currentAttributes, image, quantity }, index) => (
+											<CartIconProduct
+												key={index}
+												id={id}
+												brand={brand}
+												name={name}
+												currentCurrency={currentCurrency}
+												prices={prices}
+												attributes={attributes}
+												currentAttributes={currentAttributes}
+												image={image}
+												quantity={quantity}
+											></CartIconProduct>
+										),
+									)}
 								</Products>
 								<Total>
-									Total<TotalPrice>{currentCurrency}200.00</TotalPrice>
+									Total
+									<TotalPrice>
+										{currentCurrency}
+										{totalAmount.toFixed(2)}
+									</TotalPrice>
 								</Total>
 							</DropdownProducts>
-							<ViewBag>VIEW BAG</ViewBag>
-							<CheckOut>CHECK OUT</CheckOut>
+							<Buttons>
+								<ViewBag to={`/cart`}>VIEW BAG</ViewBag>
+								<CheckOut>CHECK OUT</CheckOut>
+							</Buttons>
 						</Dropdown>
 					</>
 				)}
