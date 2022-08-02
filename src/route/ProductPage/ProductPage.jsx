@@ -5,7 +5,7 @@ import withRouter from "route/withRouter";
 import client from "query/apolloClient";
 import GET_PRODUCT from "query/Product.query";
 import { addToCart } from "store/cartSlice";
-import ProductAttributes from "component/ProductPageAttributes";
+import ProductAttributes from "component/ProductAttributes";
 import {
 	Container,
 	GalleryList,
@@ -145,6 +145,7 @@ export class ProductPage extends PureComponent {
 						attributes={attributes}
 						currentAttributes={currentAttributes}
 						handleClickAttribute={this.handleClickAttribute}
+						origin={"page"}
 					/>
 					<Price>Price:</Price>
 					<PriceValue>

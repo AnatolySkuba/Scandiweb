@@ -3,8 +3,8 @@ import { PureComponent } from "react";
 import withRouter from "route/withRouter";
 import client from "query/apolloClient";
 import GET_PRODUCTS from "query/Products.query";
-import ProductListItem from "component/ProductListItem";
-import { CategoryName, ProductList } from "./CategoryPage.styled";
+import CategoryListProduct from "component/CategoryListProduct";
+import { CategoryName, CategoryList } from "./CategoryPage.styled";
 
 export class CategoryPageContainer extends PureComponent {
 	state = { products: [] };
@@ -39,9 +39,9 @@ export class CategoryPageContainer extends PureComponent {
 		return (
 			<>
 				<CategoryName>{this.categoryName()}</CategoryName>
-				<ProductList>
+				<CategoryList>
 					{products?.map(({ id, gallery, name, brand, prices, inStock }) => (
-						<ProductListItem
+						<CategoryListProduct
 							key={id}
 							id={id}
 							gallery={gallery[0]}
@@ -51,7 +51,7 @@ export class CategoryPageContainer extends PureComponent {
 							inStock={inStock}
 						/>
 					))}
-				</ProductList>
+				</CategoryList>
 			</>
 		);
 	}

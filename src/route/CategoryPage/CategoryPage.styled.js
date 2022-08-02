@@ -8,7 +8,7 @@ export const CategoryName = styled.h2`
 	line-height: 160%;
 `;
 
-export const ProductList = styled.ul`
+export const CategoryList = styled.ul`
 	display: grid;
 	grid-template-columns: repeat(3, calc(386 / 1440 * 100vw));
 	grid-gap: calc(40 / 1440 * 100vw);

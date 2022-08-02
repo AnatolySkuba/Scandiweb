@@ -1,7 +1,7 @@
 import { PureComponent } from "react";
 import { connect } from "react-redux";
 
-import CartIconProduct from "component/CartIconProduct";
+import CartProduct from "component/CartProduct";
 import {
 	Container,
 	CartSvg,
@@ -60,7 +60,7 @@ export class CartIcon extends PureComponent {
 								<Products>
 									{products.map(
 										({ id, brand, name, prices, attributes, currentAttributes, image, quantity }, index) => (
-											<CartIconProduct
+											<CartProduct
 												key={index}
 												id={id}
 												brand={brand}
@@ -71,7 +71,7 @@ export class CartIcon extends PureComponent {
 												currentAttributes={currentAttributes}
 												image={image}
 												quantity={quantity}
-											></CartIconProduct>
+											></CartProduct>
 										),
 									)}
 								</Products>
@@ -84,7 +84,9 @@ export class CartIcon extends PureComponent {
 								</Total>
 							</DropdownProducts>
 							<Buttons>
-								<ViewBag to={`/cart`}>VIEW BAG</ViewBag>
+								<ViewBag to={`/cart`} onClick={() => this.toggleDropdown()}>
+									VIEW BAG
+								</ViewBag>
 								<CheckOut>CHECK OUT</CheckOut>
 							</Buttons>
 						</Dropdown>

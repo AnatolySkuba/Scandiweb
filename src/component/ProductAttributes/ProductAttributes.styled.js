@@ -1,27 +1,14 @@
 import styled from "styled-components";
 
-export const Attributes = styled.ul``;
-
-export const Attribute = styled.li``;
-
-export const Name = styled.p`
-	margin: 24px 0 8px;
-	font-weight: 700;
-	font-size: 18px;
-	line-height: 18px;
-`;
+export const Name = styled.p``;
 
 export const Items = styled.ul`
 	display: flex;
 `;
 
 export const Item = styled.li`
-	width: 63px;
-	height: 45px;
 	font-weight: 400;
-	font-size: 16px;
 	text-align: center;
-	line-height: 45px;
 	border: 1px solid var(--main-text-color);
 	background-color: ${({ name, value, currentAttributes }) =>
 		currentAttributes.some(
@@ -35,15 +22,9 @@ export const Item = styled.li`
 	&: not(: last-child) {
 		margin-right: 12px;
 	}
-
-	&:hover {
-		cursor: pointer;
-	}
 `;
 
 export const ItemSwatch = styled.li`
-	width: 32px;
-	height: 32px;
 	background-color: ${({ value }) => value};
 	border: ${({ value }) => value === "#FFFFFF" && "1px solid var(--main-text-color)"};
 	outline-offset: 1px;
@@ -56,15 +37,37 @@ export const ItemSwatch = styled.li`
 		margin-right: 12px;
 	}
 
-	&:hover {
-		cursor: pointer;
-	}
-
 	&:hover::after {
 		display: inline-block;
-		margin-top: 32px;
-		font-size: 15px;
+		margin-top: 16px;
+		font-size: 14px;
 		color: ${({ value }) => (value === "#FFFFFF" ? "var(--main-text-color)" : value)};
 		content: "${({ displayValue }) => displayValue}";
+	}
+`;
+
+export const Attribute = styled.li`
+	${Name} {
+		margin: ${props => (props.origin === "page" ? "16px 0 10px" : "10px 0 8px")};
+		font-weight: ${props => (props.origin === "page" ? "700" : "400")};
+		font-size: ${props => (props.origin === "page" ? "18px" : "14px")};
+		line-height: ${props => (props.origin === "page" ? "18px" : "16px")};
+	}
+
+	${Item} {
+		min-width: ${props => (props.origin === "page" ? "63px" : "24px")};
+		height: ${props => (props.origin === "page" ? "45px" : "24px")};
+		font-size: ${props => (props.origin === "page" ? "16px" : "14px")};
+		line-height: ${props => (props.origin === "page" ? "45px" : "160%")};
+	}
+
+	${ItemSwatch} {
+		width: ${props => (props.origin === "page" ? "32px" : "16px")};
+		height: ${props => (props.origin === "page" ? "32px" : "16px")};
+		font-size: ${props => (props.origin === "page" ? "16px" : "14px")};
+
+		&:hover::after {
+			margin-top: ${props => (props.origin === "page" ? "32px" : "16px")};
+		}
 	}
 `;

@@ -8,13 +8,13 @@ import {
 	ProductName,
 	ProductPrice,
 	OutOfStock,
-} from "./ProductListItem.styled";
+} from "./CategoryListProduct.styled";
 
 const mapStateToProps = state => ({
 	currentCurrency: state.cart.currentCurrency,
 });
 
-export class ProductListItem extends PureComponent {
+export class CategoryListProduct extends PureComponent {
 	render() {
 		const { id, gallery, brand, name, prices, inStock, currentCurrency } = this.props;
 		let currentAmount;
@@ -42,4 +42,4 @@ export class ProductListItem extends PureComponent {
 	}
 }
 
-export default connect(mapStateToProps)(ProductListItem);
+export default connect(mapStateToProps)(CategoryListProduct);

@@ -2,22 +2,23 @@ import { PureComponent } from "react";
 import { connect } from "react-redux";
 
 import { addToCart } from "store/cartSlice";
-import CartIconProductAttributes from "component/CartIconProductAttributes";
+import ProductAttributes from "component/ProductAttributes";
 import {
 	Container,
 	ContainerDescription,
-	BrandName,
+	Brand,
+	Name,
 	PriceValue,
 	ContainerCounter,
 	HandleButton,
 	Image,
-} from "./CartIconProduct.styled";
+} from "./CartProduct.styled";
 
 const mapStateToProps = state => ({
 	products: state.cart.products,
 });
 
-export class CartIconProduct extends PureComponent {
+export class CartProduct extends PureComponent {
 	state = { quantity: 0 };
 
 	componentDidMount() {
@@ -28,19 +29,7 @@ export class CartIconProduct extends PureComponent {
 		this.setState({ quantity: this.props.quantity });
 	}
 
-	handleClickAttribute = (name, value) => {
-		const currentAttributes = [...this.state.currentAttributes];
-		currentAttributes?.some(currentAttribute => Object.keys(currentAttribute)[0] === name)
-			? currentAttributes.forEach((currentAttribute, index) => {
-					Object.keys(currentAttribute)[0] === name && currentAttribute[name] === value
-						? currentAttributes.splice(index, 1)
-						: Object.keys(currentAttributes[index])[0] === name &&
-						  currentAttributes.splice(index, 1, { ...currentAttributes[index], [name]: value });
-			  })
-			: currentAttributes.push({ [name]: value });
-
-		this.setState({ currentAttributes: currentAttributes });
-	};
+	handleClickAttribute = () => {};
 
 	handleQuantity(operator) {
 		operator === "increment"
@@ -85,33 +74,34 @@ export class CartIconProduct extends PureComponent {
 	}
 
 	render() {
-		const { brand, name, prices, attributes, currentAttributes, currentCurrency, image } = this.props;
+		const { brand, name, prices, attributes, currentAttributes, currentCurrency, image, origin } = this.props;
 		const amount = prices?.find(({ currency }) => currency.symbol === currentCurrency);
 		const currentAmount = (amount?.amount * this.state.quantity).toFixed(2);
-		// console.log(this.props);
 
 		return (
-			<Container>
+			<Container origin={origin}>
 				<ContainerDescription>
-					<BrandName>
-						{brand}
-						<br />
-						{name}
-					</BrandName>
+					<Brand>{brand}</Brand>
+					<Name>{name}</Name>
 					<PriceValue>
 						{currentCurrency}
 						{currentAmount}
 					</PriceValue>
-					<CartIconProductAttributes
+					<ProductAttributes
 						attributes={attributes}
 						currentAttributes={currentAttributes}
 						handleClickAttribute={this.handleClickAttribute}
+						origin={origin}
 					/>
 				</ContainerDescription>
 				<ContainerCounter>
-					<HandleButton onClick={() => this.handleQuantity("increment")}>&#43;</HandleButton>
+					<HandleButton onClick={() => this.handleQuantity("increment")} origin={origin}>
+						+
+					</HandleButton>
 					{this.state.quantity}
-					<HandleButton onClick={() => this.handleQuantity("decrement")}>&minus;</HandleButton>
+					<HandleButton onClick={() => this.handleQuantity("decrement")} origin={origin}>
+						&ndash;
+					</HandleButton>
 				</ContainerCounter>
 				<Image src={image} />
 			</Container>
@@ -119,4 +109,4 @@ export class CartIconProduct extends PureComponent {
 	}
 }
 
-export default connect(mapStateToProps, { addToCart })(CartIconProduct);
+export default connect(mapStateToProps, { addToCart })(CartProduct);

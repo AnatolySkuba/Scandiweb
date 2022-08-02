@@ -1,15 +1,15 @@
 import { PureComponent } from "react";
 
-import { Attributes, Attribute, Name, Items, Item, ItemSwatch } from "./ProductPageAttributes.styled";
+import { Attribute, Name, Items, Item, ItemSwatch } from "./ProductAttributes.styled";
 
-export class ProductPageAttributes extends PureComponent {
+export class ProductAttributes extends PureComponent {
 	render() {
-		const { attributes, currentAttributes, handleClickAttribute } = this.props;
+		const { attributes, currentAttributes, handleClickAttribute, origin } = this.props;
 
 		return (
-			<Attributes>
+			<ul>
 				{attributes?.map(({ id, name, items, type }) => (
-					<Attribute key={id}>
+					<Attribute key={id} origin={origin}>
 						<Name>{name}:</Name>
 						<Items>
 							{items.map(({ id, value, displayValue }) =>
@@ -37,9 +37,9 @@ export class ProductPageAttributes extends PureComponent {
 						</Items>
 					</Attribute>
 				))}
-			</Attributes>
+			</ul>
 		);
 	}
 }
 
-export default ProductPageAttributes;
+export default ProductAttributes;
