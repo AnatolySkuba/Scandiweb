@@ -1,7 +1,8 @@
 {
-	"name": "scandiweb-my",
+	"name": "Scandiweb",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://AnatoliiSkuba.github.io/Scandiweb/",
 	"dependencies": {
 		"@apollo/client": "^3.6.9",
 		"@reduxjs/toolkit": "^1.8.3",
