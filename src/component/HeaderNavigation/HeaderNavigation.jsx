@@ -3,9 +3,9 @@ import { PureComponent } from "react";
 import withRouter from "route/withRouter";
 import client from "query/apolloClient";
 import GET_CATEGORIES from "query/Categories.query";
-import { List, Link } from "./Navigation.styled";
+import { List, Link } from "./HeaderNavigation.styled";
 
-export class Navigation extends PureComponent {
+export class HeaderNavigation extends PureComponent {
 	state = { categories: [] };
 
 	componentDidMount() {
@@ -41,4 +41,4 @@ export class Navigation extends PureComponent {
 	}
 }
 
-export default withRouter(Navigation);
+export default withRouter(HeaderNavigation);

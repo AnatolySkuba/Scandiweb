@@ -1,10 +1,10 @@
 import { PureComponent } from "react";
 import { Outlet } from "react-router-dom";
 
-import Navigation from "component/Navigation";
-import Logo from "component/Logo";
-import CurrencyIcon from "component/CurrencyIcon";
-import CartIcon from "component/CartIcon";
+import HeaderNavigation from "component/HeaderNavigation";
+import HeaderLogo from "component/HeaderLogo";
+import HeaderCurrencyIcon from "component/HeaderCurrencyIcon";
+import HeaderCartIcon from "component/HeaderCartIcon";
 import { Container } from "./Header.styled";
 
 export class Header extends PureComponent {
@@ -12,10 +12,10 @@ export class Header extends PureComponent {
 		return (
 			<>
 				<Container>
-					<Navigation />
-					<Logo />
-					<CurrencyIcon />
-					<CartIcon />
+					<HeaderNavigation />
+					<HeaderLogo />
+					<HeaderCurrencyIcon />
+					<HeaderCartIcon />
 				</Container>
 
 				<Outlet />

@@ -4,7 +4,7 @@ import { Attribute, Name, Items, Item, ItemSwatch } from "./ProductAttributes.st
 
 export class ProductAttributes extends PureComponent {
 	render() {
-		const { attributes, currentAttributes, handleClickAttribute, origin } = this.props;
+		const { attributes, currentAttributes, handleClickAttribute, origin, inStock } = this.props;
 
 		return (
 			<ul>
@@ -20,7 +20,7 @@ export class ProductAttributes extends PureComponent {
 										value={value}
 										displayValue={displayValue}
 										currentAttributes={currentAttributes}
-										onClick={() => handleClickAttribute(name, value)}
+										onClick={() => inStock && handleClickAttribute(name, value)}
 									/>
 								) : (
 									<Item
@@ -28,7 +28,7 @@ export class ProductAttributes extends PureComponent {
 										name={name}
 										value={value}
 										currentAttributes={currentAttributes}
-										onClick={() => handleClickAttribute(name, value)}
+										onClick={() => inStock && handleClickAttribute(name, value)}
 									>
 										{value}
 									</Item>

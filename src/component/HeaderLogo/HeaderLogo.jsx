@@ -1,9 +1,9 @@
 import { PureComponent } from "react";
 
 import { ReactComponent as LogoSvg } from "style/icons/logo.svg";
-import { StyledLink } from "./Logo.styled";
+import { StyledLink } from "./HeaderLogo.styled";
 
-class Logo extends PureComponent {
+class HeaderLogo extends PureComponent {
 	render() {
 		return (
 			<StyledLink to="/">
@@ -13,4 +13,4 @@ class Logo extends PureComponent {
 	}
 }
 
-export default Logo;
+export default HeaderLogo;

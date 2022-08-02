@@ -1,6 +1,7 @@
 :root {
 	--main-text-color: #1d1f22;
 	--accent-color: #5ece7b;
+	--point: calc((270 / 386 * 242 + 386 * 2) * 1px);
 }
 
 * {

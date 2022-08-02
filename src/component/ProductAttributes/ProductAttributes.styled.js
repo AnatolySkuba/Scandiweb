@@ -52,6 +52,11 @@ export const Attribute = styled.li`
 		font-weight: ${props => (props.origin === "page" ? "700" : "400")};
 		font-size: ${props => (props.origin === "page" ? "18px" : "14px")};
 		line-height: ${props => (props.origin === "page" ? "18px" : "16px")};
+
+		@media screen and (max-width: 1024px) {
+			margin: ${props =>
+				props.origin === "page" ? "calc(16 / 1024 * 100vw) 0 calc(10 / 1024 * 100vw)" : "10px 0 8px"};
+		}
 	}
 
 	${Item} {
@@ -59,6 +64,13 @@ export const Attribute = styled.li`
 		height: ${props => (props.origin === "page" ? "45px" : "24px")};
 		font-size: ${props => (props.origin === "page" ? "16px" : "14px")};
 		line-height: ${props => (props.origin === "page" ? "45px" : "160%")};
+
+		@media screen and (max-width: 1024px) {
+			min-width: ${props => (props.origin === "page" ? "calc(63 / 1024 * 100vw)" : "24px")};
+			height: ${props => (props.origin === "page" ? "calc(45 / 1024 * 100vw)" : "24px")};
+			font-size: ${props => (props.origin === "page" ? "calc(16 / 1024 * 100vw)" : "14px")};
+			line-height: ${props => (props.origin === "page" ? "calc(45 / 1024 * 100vw)" : "160%")};
+		}
 	}
 
 	${ItemSwatch} {
@@ -68,6 +80,11 @@ export const Attribute = styled.li`
 
 		&:hover::after {
 			margin-top: ${props => (props.origin === "page" ? "32px" : "16px")};
+		}
+
+		@media screen and (max-width: 1024px) {
+			width: ${props => (props.origin === "page" ? "calc(32 / 1024 * 100vw)" : "16px")};
+			height: ${props => (props.origin === "page" ? "calc(32 / 1024 * 100vw)" : "16px")};
 		}
 	}
 `;

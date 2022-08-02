@@ -6,4 +6,12 @@ export const StyledLink = styled(Link)`
 	top: 29.41px;
 	left: 50%;
 	transform: translate(-50%, 0);
+
+	@media screen and (max-width: 485px) {
+		left: 230px;
+	}
+
+	@media screen and (max-width: 380px) {
+		display: none;
+	}
 `;

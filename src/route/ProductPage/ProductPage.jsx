@@ -12,6 +12,7 @@ import {
 	GalleryItem,
 	GalleryImages,
 	ImageMain,
+	Box,
 	ProductDescription,
 	Brand,
 	Name,
@@ -19,6 +20,7 @@ import {
 	PriceValue,
 	Button,
 	Description,
+	OutOfStock,
 } from "./ProductPage.styled";
 
 const mapStateToProps = state => ({
@@ -123,13 +125,13 @@ export class ProductPage extends PureComponent {
 	}
 
 	render() {
-		const { gallery, brand, name, attributes, prices, description } = this.state.product;
+		const { gallery, brand, name, attributes, prices, description, inStock } = this.state.product;
 		const { currentCurrency } = this.props;
 		const { currentImage, currentAttributes } = this.state;
 		const currentAmount = prices?.find(({ currency }) => currency.symbol === currentCurrency);
 
 		return (
-			<Container>
+			<Container inStock={inStock}>
 				<GalleryList>
 					{gallery?.map((image, index) => (
 						<GalleryItem key={index}>
@@ -137,7 +139,10 @@ export class ProductPage extends PureComponent {
 						</GalleryItem>
 					))}
 				</GalleryList>
-				{gallery && <ImageMain src={currentImage || gallery[0]} />}
+				<Box>
+					{gallery && <ImageMain src={currentImage || gallery[0]} />}
+					{!inStock && <OutOfStock>OUT OF STOCK</OutOfStock>}
+				</Box>
 				<ProductDescription>
 					<Brand>{brand}</Brand>
 					<Name>{name}</Name>
@@ -146,13 +151,14 @@ export class ProductPage extends PureComponent {
 						currentAttributes={currentAttributes}
 						handleClickAttribute={this.handleClickAttribute}
 						origin={"page"}
+						inStock={inStock}
 					/>
 					<Price>Price:</Price>
 					<PriceValue>
 						{currentCurrency}
 						{currentAmount?.amount}
 					</PriceValue>
-					<Button onClick={() => this.addToCart()}>ADD TO CART</Button>
+					<Button onClick={() => inStock && this.addToCart()}>ADD TO CART</Button>
 					<Description>{description}</Description>
 				</ProductDescription>
 			</Container>

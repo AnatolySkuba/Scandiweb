@@ -4,13 +4,13 @@ import { connect } from "react-redux";
 import client from "query/apolloClient";
 import GET_CURRENCIES from "query/Currencies.query";
 import { setCurrency } from "store/cartSlice";
-import { Container, Icon, ArrowSvg, DropdownList, DropdownItem, BackDrop } from "./CurrencyIcon.styled";
+import { Container, Icon, ArrowSvg, DropdownList, DropdownItem, BackDrop } from "./HeaderCurrencyIcon.styled";
 
 const mapStateToProps = state => ({
 	currentCurrency: state.cart.currentCurrency,
 });
 
-export class CurrencyIcon extends PureComponent {
+export class HeaderCurrencyIcon extends PureComponent {
 	state = { currencies: [], currency: "", dropdown: false };
 
 	componentDidMount() {
@@ -60,4 +60,4 @@ export class CurrencyIcon extends PureComponent {
 	}
 }
 
-export default connect(mapStateToProps, { setCurrency })(CurrencyIcon);
+export default connect(mapStateToProps, { setCurrency })(HeaderCurrencyIcon);

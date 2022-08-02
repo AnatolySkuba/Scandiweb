@@ -16,14 +16,14 @@ import {
 	Buttons,
 	ViewBag,
 	CheckOut,
-} from "./CartIcon.styled";
+} from "./HeaderCartIcon.styled";
 
 const mapStateToProps = state => ({
 	currentCurrency: state.cart.currentCurrency,
 	products: state.cart.products,
 });
 
-export class CartIcon extends PureComponent {
+export class HeaderCartIcon extends PureComponent {
 	state = { dropdown: false };
 
 	toggleDropdown() {
@@ -97,4 +97,4 @@ export class CartIcon extends PureComponent {
 	}
 }
 
-export default connect(mapStateToProps)(CartIcon);
+export default connect(mapStateToProps)(HeaderCartIcon);
