@@ -1,5 +1,6 @@
 import { PureComponent } from "react";
 import { connect } from "react-redux";
+import DOMPurify from "dompurify";
 
 import withRouter from "route/withRouter";
 import client from "query/apolloClient";
@@ -99,7 +100,7 @@ export class ProductPage extends PureComponent {
 						attributes: product.attributes,
 						currentAttributes: currentAttributes,
 						prices: product.prices,
-						image: product.gallery[0],
+						gallery: product.gallery,
 						quantity: 1,
 				  });
 
@@ -116,7 +117,7 @@ export class ProductPage extends PureComponent {
 					attributes: product.attributes,
 					currentAttributes: currentAttributes,
 					prices: product.prices,
-					image: product.gallery[0],
+					gallery: product.gallery,
 					quantity: 1,
 				});
 
@@ -159,7 +160,11 @@ export class ProductPage extends PureComponent {
 						{currentAmount?.amount}
 					</PriceValue>
 					<Button onClick={() => inStock && this.addToCart()}>ADD TO CART</Button>
-					<Description>{description}</Description>
+					<Description
+						dangerouslySetInnerHTML={{
+							__html: DOMPurify.sanitize(description),
+						}}
+					></Description>
 				</ProductDescription>
 			</Container>
 		);

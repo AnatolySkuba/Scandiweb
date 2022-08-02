@@ -42,7 +42,6 @@ export const TaxQuantity = styled.p`
 `;
 
 export const Total = styled.p`
-	margin-bottom: 16px;
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 28px;
@@ -72,6 +71,7 @@ export const TaxQuantityValue = styled.span`
 `;
 
 export const Order = styled.button`
+	margin: 16px 0;
 	width: 279px;
 	height: 43px;
 	font-weight: 600;

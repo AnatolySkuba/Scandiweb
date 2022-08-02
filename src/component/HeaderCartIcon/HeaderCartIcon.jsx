@@ -59,7 +59,7 @@ export class HeaderCartIcon extends PureComponent {
 								<Name>My Bag, {totalProducts} items</Name>
 								<Products>
 									{products.map(
-										({ id, brand, name, prices, attributes, currentAttributes, image, quantity }, index) => (
+										({ id, brand, name, prices, attributes, currentAttributes, gallery, quantity }, index) => (
 											<CartProduct
 												key={index}
 												id={id}
@@ -69,7 +69,7 @@ export class HeaderCartIcon extends PureComponent {
 												prices={prices}
 												attributes={attributes}
 												currentAttributes={currentAttributes}
-												image={image}
+												gallery={gallery}
 												quantity={quantity}
 											></CartProduct>
 										),

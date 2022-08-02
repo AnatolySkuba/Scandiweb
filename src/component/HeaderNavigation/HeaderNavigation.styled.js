@@ -16,10 +16,12 @@ export const Link = styled(NavLink)`
 		location === "/" && children === "all" ? "var(--accent-color)" : "var(--main-text-color)"};
 	border-bottom: ${({ location, children }) =>
 		location === "/" && children === "all" ? "2px solid var(--accent-color)" : ""};
+
 	&.active {
 		color: var(--accent-color);
 		border-bottom: 2px solid var(--accent-color);
 	}
+
 	&:hover {
 		color: var(--accent-color);
 	}

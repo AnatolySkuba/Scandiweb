@@ -36,6 +36,7 @@ export class CategoryPageContainer extends PureComponent {
 
 	render() {
 		const { products } = this.state;
+
 		return (
 			<>
 				<CategoryName>{this.categoryName()}</CategoryName>

@@ -23,6 +23,7 @@ export const GalleryItem = styled.li`
 	width: 79px;
 	height: 80px;
 	cursor: pointer;
+	
 	&: not(: last-child) {
 		margin-bottom: 40px;
 	} ;

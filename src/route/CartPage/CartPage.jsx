@@ -1,7 +1,7 @@
 import { PureComponent } from "react";
 import { connect } from "react-redux";
 
-import CartIconProduct from "component/CartProduct";
+import CartProduct from "component/CartProduct";
 import { Container, Cart, Products, TaxQuantity, Total, TaxQuantityValue, Order } from "./CartPage.styled";
 
 const mapStateToProps = state => ({
@@ -30,8 +30,8 @@ export class CartPage extends PureComponent {
 			<Container>
 				<Cart>CART</Cart>
 				<Products>
-					{products.map(({ id, brand, name, prices, attributes, currentAttributes, image, quantity }, index) => (
-						<CartIconProduct
+					{products.map(({ id, brand, name, prices, attributes, currentAttributes, gallery, quantity }, index) => (
+						<CartProduct
 							key={index}
 							id={id}
 							brand={brand}
@@ -40,10 +40,10 @@ export class CartPage extends PureComponent {
 							prices={prices}
 							attributes={attributes}
 							currentAttributes={currentAttributes}
-							image={image}
+							gallery={gallery}
 							quantity={quantity}
 							origin={"page"}
-						></CartIconProduct>
+						></CartProduct>
 					))}
 				</Products>
 				<TaxQuantity>

@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+Hello, dear visitor. I completed this task according to the following requirements:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **Welcome to Scandiweb Junior Developer test assignment!**
 
-## Available Scripts
+Thank you for your interest and time! Since 2003 we have been figuring out what is the minimum skills and knowledge level to be successful at your training and further career at scandiweb.
 
-In the project directory, you can run:
+This test requires showcasing this minimum skill level by completing practical tasks. It helps you to check whether your level is already good to join us as a Junior Developer.
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This task will put you face-to-face to some common tasks in the world of React development and possibly will get you acknowledged with a bit of new technologies.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You are expected to fetch data from the GraphQL endpoint and to provide an interface to view and interact with this data. You can find the endpoint [here](https://github.com/scandiweb/junior-react-endpoint), along with instructions on how to launch it.
 
-### `npm test`
+The solution should be implemented as per design, which is available at [\*\*this link](https://www.figma.com/file/MSyCAqVy1UgNap0pvqH6H3/Junior-Frontend-Test-Designs-Public?node-id=0%3A1).\*\*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Have any questions? Please check out our Frequently Asked Questions page!
 
-### `npm run build`
+[❓React Developer test - FAQ/frequently asked questions](https://www.notion.so/00e72f0844a344dda28e19855d2fc34a)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Before you start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The provided endpoint is a (GraphQL -https://graphql.org/learn/) endpoint. If you are not familiar with GraphQL - don't worry, only entry-level functionality is utilized. You can use any GraphQL client, for example, our own minimalistic: (**Opus** - https://www.npmjs.com/package/@tilework/opus) or more widespread and heavyweight (**Apollo** - https://www.apollographql.com/docs/react/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The functionality should be implemented exactly as-per-design. Not necessarily pixel-perfect though. Pay close attention to all of the details, there should not be any noticeable mismatches between the designs and your implementation both in terms of design and functionality.
 
-### `npm run eject`
+Think about the implementable functionality in scale, as in a real-life project. What will happen if you have more than 4 products? The pagination is not expected though - it is not in the design.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Toolkit requirements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+When selecting a toolkit for this assignment, following these guidelines is mandatory.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Required:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- React. Anything not written in React will be rejected automatically. This is a React position, we expect a React solution.
+- Class components. Due to our [work specifics](<[https://docs.scandipwa.com/stack/override-mechanism/extending-javascript](https://docs.scandipwa.com/developing-with-scandi/override-mechanism/extending-javascript)>) we utilize them heavily.
+- Create-react-app to scaffold the application.
 
-## Learn More
+## Allowed:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- State management libraries (e.g. Redux, Recoil)
+- CSS-in-JS approach allowers (e.g. styled-components)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Prohibited:
 
-### Code Splitting
+- UI libraries (e.g. Tailwind, Material UI, Ant Design)
+- Functional components, due to the reasons described above.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Functionality requirements
 
-### Analyzing the Bundle Size
+- PLP - product listing page, a.k.a. category page
+- PDP - product description page, a.k.a. product page
+- Cart page + Cart overlay (minicart)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Details
 
-### Making a Progressive Web App
+See some more specific information on the main requirements below. Remember - if something is in the design, but is not explicitly described here or above, it should be implemented anyways.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Ability to add/remove products and change their amounts in cart - on the cart page itself, PLP and PDP should be provided.
+- For products that have various options (attributes) - the options should be selected.
+- The selected options of added to cart products should be visible in cart overlay and in cart page.
+- If an attribute is a swatch attribute (type = swatch), a representation of the value should be rendered on PDP and PLP, rather than text description (e.g. the color itself, not "Blue" or "0000FF")
+- Filtering products by category name for all of the categories from BE
+- The descriptions provided in HTML format should be parsed and presented as HTML, not as plain text
+- Ability to change the currency of the store to one of the available currencies

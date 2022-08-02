@@ -1,7 +1,6 @@
 :root {
 	--main-text-color: #1d1f22;
 	--accent-color: #5ece7b;
-	--point: calc((270 / 386 * 242 + 386 * 2) * 1px);
 }
 
 * {
@@ -10,10 +9,15 @@
 	box-sizing: border-box;
 	color: var(--main-text-color);
 	list-style-type: none;
-
 	font-family: "Raleway", sans-serif;
 	font-style: normal;
 	text-decoration: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 html {

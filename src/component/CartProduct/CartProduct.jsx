@@ -11,7 +11,10 @@ import {
 	PriceValue,
 	ContainerCounter,
 	HandleButton,
+	Box,
 	Image,
+	ArrowLeft,
+	ArrowRight,
 } from "./CartProduct.styled";
 
 const mapStateToProps = state => ({
@@ -19,10 +22,10 @@ const mapStateToProps = state => ({
 });
 
 export class CartProduct extends PureComponent {
-	state = { quantity: 0 };
+	state = { quantity: 0, GalleryIndex: 0 };
 
 	componentDidMount() {
-		this.setState({ quantity: this.props.quantity });
+		this.setState({ quantity: this.props.quantity, image: this.props.gallery[0] });
 	}
 
 	componentDidUpdate() {
@@ -73,8 +76,16 @@ export class CartProduct extends PureComponent {
 		}
 	}
 
+	handleClickImage = event => {
+		const { GalleryIndex } = this.state;
+		const { gallery } = this.props;
+		event === "left"
+			? this.setState({ GalleryIndex: GalleryIndex === 0 ? gallery.length - 1 : GalleryIndex - 1 })
+			: this.setState({ GalleryIndex: gallery.length > GalleryIndex + 1 ? GalleryIndex + 1 : 0 });
+	};
+
 	render() {
-		const { brand, name, prices, attributes, currentAttributes, currentCurrency, image, origin } = this.props;
+		const { brand, name, prices, attributes, currentAttributes, currentCurrency, gallery, origin } = this.props;
 		const amount = prices?.find(({ currency }) => currency.symbol === currentCurrency);
 		const currentAmount = (amount?.amount * this.state.quantity).toFixed(2);
 
@@ -103,7 +114,15 @@ export class CartProduct extends PureComponent {
 						&ndash;
 					</HandleButton>
 				</ContainerCounter>
-				<Image src={image} />
+				<Box>
+					<Image src={gallery[this.state.GalleryIndex]} />
+					{origin === "page" && gallery.length > 1 && (
+						<>
+							<ArrowLeft onClick={() => this.handleClickImage("left")} />
+							<ArrowRight onClick={() => this.handleClickImage("right")} />
+						</>
+					)}
+				</Box>
 			</Container>
 		);
 	}

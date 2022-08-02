@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactComponent as Svg } from "style/icons/arrow.svg";
 
 export const ContainerDescription = styled.div`
 	margin-inline-end: auto;
@@ -25,8 +26,38 @@ export const HandleButton = styled.div`
 	cursor: pointer;
 `;
 
+export const Box = styled.div`
+	position: relative;
+`;
+
 export const Image = styled.img`
 	object-fit: contain;
+`;
+
+export const ArrowLeft = styled(Svg)`
+	transform: rotate(90deg);
+	position: absolute;
+	padding: 6px;
+	width: 24px;
+	height: 24px;
+	bottom: 16px;
+	right: 48px;
+	stroke: white;
+	background-color: rgba(0, 0, 0, 0.73);
+	cursor: pointer;
+`;
+
+export const ArrowRight = styled(Svg)`
+	transform: rotate(-90deg);
+	position: absolute;
+	padding: 6px;
+	width: 24px;
+	height: 24px;
+	bottom: 16px;
+	right: 16px;
+	stroke: white;
+	background-color: rgba(0, 0, 0, 0.73);
+	cursor: pointer;
 `;
 
 export const Container = styled.li`

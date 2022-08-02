@@ -18,6 +18,7 @@ export const Icon = styled.div`
 
 export const ArrowSvg = styled(Svg)`
 	transform: ${({ dropdown }) => (dropdown === "true" ? "rotate(180deg)" : "")};
+	stroke: black;
 `;
 
 export const DropdownList = styled.ul`
