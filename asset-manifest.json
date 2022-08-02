@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.d6563939.css",
-    "main.js": "/static/js/main.aa142c0d.js",
-    "CategoryPage.js": "/static/js/CategoryPage.b1275467.chunk.js",
-    "ProductPage.js": "/static/js/ProductPage.27f3439d.chunk.js",
-    "CartPage.js": "/static/js/CartPage.ff316f21.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.5d12b4faf427c0c1570ba07ef816045d.svg",
-    "static/media/cart.svg": "/static/media/cart.a9875b99a8cd4fcabc1b6f2e560b0271.svg",
-    "index.html": "/index.html",
-    "static/media/arrow.svg": "/static/media/arrow.435ec0614730b3e210bfb7b105fc7a9b.svg",
-    "main.d6563939.css.map": "/static/css/main.d6563939.css.map",
-    "main.aa142c0d.js.map": "/static/js/main.aa142c0d.js.map",
-    "CategoryPage.b1275467.chunk.js.map": "/static/js/CategoryPage.b1275467.chunk.js.map",
-    "ProductPage.27f3439d.chunk.js.map": "/static/js/ProductPage.27f3439d.chunk.js.map",
-    "CartPage.ff316f21.chunk.js.map": "/static/js/CartPage.ff316f21.chunk.js.map"
+    "main.css": "/Scandiweb/static/css/main.d6563939.css",
+    "main.js": "/Scandiweb/static/js/main.38198926.js",
+    "CategoryPage.js": "/Scandiweb/static/js/CategoryPage.f9a31c53.chunk.js",
+    "ProductPage.js": "/Scandiweb/static/js/ProductPage.c129b099.chunk.js",
+    "CartPage.js": "/Scandiweb/static/js/CartPage.dcb3b914.chunk.js",
+    "static/media/logo.svg": "/Scandiweb/static/media/logo.5d12b4faf427c0c1570ba07ef816045d.svg",
+    "static/media/cart.svg": "/Scandiweb/static/media/cart.a9875b99a8cd4fcabc1b6f2e560b0271.svg",
+    "index.html": "/Scandiweb/index.html",
+    "static/media/arrow.svg": "/Scandiweb/static/media/arrow.435ec0614730b3e210bfb7b105fc7a9b.svg",
+    "main.d6563939.css.map": "/Scandiweb/static/css/main.d6563939.css.map",
+    "main.38198926.js.map": "/Scandiweb/static/js/main.38198926.js.map",
+    "CategoryPage.f9a31c53.chunk.js.map": "/Scandiweb/static/js/CategoryPage.f9a31c53.chunk.js.map",
+    "ProductPage.c129b099.chunk.js.map": "/Scandiweb/static/js/ProductPage.c129b099.chunk.js.map",
+    "CartPage.dcb3b914.chunk.js.map": "/Scandiweb/static/js/CartPage.dcb3b914.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d6563939.css",
-    "static/js/main.aa142c0d.js"
+    "static/js/main.38198926.js"
   ]
 }
