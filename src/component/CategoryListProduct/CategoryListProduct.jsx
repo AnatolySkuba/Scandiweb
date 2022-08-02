@@ -17,12 +17,12 @@ const mapStateToProps = state => ({
 export class CategoryListProduct extends PureComponent {
 	render() {
 		const { id, gallery, brand, name, prices, inStock, currentCurrency } = this.props;
-		let currentAmount;
-		prices.forEach(({ currency, amount }) => {
-			if (currency.symbol === currentCurrency) {
+		const currentAmount = prices.reduce((currentAmount, { currency, amount }) => {
+			if (currency?.symbol === currentCurrency) {
 				currentAmount = amount;
 			}
-		});
+			return currentAmount;
+		}, "");
 
 		return (
 			<ProductItem inStock={inStock}>
