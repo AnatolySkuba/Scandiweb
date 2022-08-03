@@ -67,7 +67,7 @@ export class ProductPage extends PureComponent {
 
 	addToCart() {
 		const { product, currentAttributes } = this.state;
-		let currentProducts = [...this.props.products];
+		const currentProducts = [...this.props.products];
 		let counter = 0;
 
 		if (product.attributes.length === currentAttributes.length) {
