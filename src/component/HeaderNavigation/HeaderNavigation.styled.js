@@ -13,9 +13,9 @@ export const Link = styled(NavLink)`
 	font-weight: 400;
 	letter-spacing: 0px;
 	color: ${({ location, children }) =>
-		location === "/" && children === "all" ? "var(--accent-color)" : "var(--main-text-color)"};
+		location === "/Scandiweb/" && children === "all" ? "var(--accent-color)" : "var(--main-text-color)"};
 	border-bottom: ${({ location, children }) =>
-		location === "/" && children === "all" ? "2px solid var(--accent-color)" : ""};
+		location === "/Scandiweb/" && children === "all" ? "2px solid var(--accent-color)" : ""};
 
 	&.active {
 		color: var(--accent-color);
