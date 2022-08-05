@@ -30,7 +30,7 @@ export class HeaderNavigation extends PureComponent {
 				<List>
 					{categories?.map(({ name }, index) => (
 						<li key={index}>
-							<Link to={`/category/${name}`} location={this.props.router.location.pathname}>
+							<Link to={`category/${name}`} location={this.props.router.location.pathname}>
 								{name}
 							</Link>
 						</li>

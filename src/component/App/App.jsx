@@ -13,13 +13,13 @@ class App extends PureComponent {
 			<BrowserRouter>
 				<Suspense fallback={<Header />}>
 					<Routes>
-						<Route path="/" element={<Header />}>
+						<Route path="/Scandiweb/" element={<Header />}>
 							<Route index element={<CategoryPage />} />
 							<Route path="category/:category" element={<CategoryPage />} />
 							<Route path="product/:productId" element={<ProductPage />} />
 							<Route path="cart" element={<CartPage />} />
 						</Route>
-						<Route path="*" element={<Navigate to="/" replace={true} />} />
+						<Route path="*" element={<Navigate to="/Scandiweb/" replace={true} />} />
 					</Routes>
 				</Suspense>
 			</BrowserRouter>

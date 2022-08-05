@@ -26,7 +26,7 @@ export class CategoryListProduct extends PureComponent {
 
 		return (
 			<ProductItem inStock={inStock}>
-				<ProductLink to={`/product/${id}`}>
+				<ProductLink to={`/Scandiweb/product/${id}`}>
 					<ProductImage src={gallery} />
 					{!inStock && <OutOfStock>OUT OF STOCK</OutOfStock>}
 					<ProductName>

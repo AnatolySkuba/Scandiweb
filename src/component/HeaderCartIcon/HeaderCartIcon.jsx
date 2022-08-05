@@ -84,7 +84,7 @@ export class HeaderCartIcon extends PureComponent {
 								</Total>
 							</DropdownProducts>
 							<Buttons>
-								<ViewBag to={`/cart`} onClick={() => this.toggleDropdown()}>
+								<ViewBag to={`/Scandiweb/cart`} onClick={() => this.toggleDropdown()}>
 									VIEW BAG
 								</ViewBag>
 								<CheckOut>CHECK OUT</CheckOut>

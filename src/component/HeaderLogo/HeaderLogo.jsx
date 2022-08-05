@@ -6,7 +6,7 @@ import { StyledLink } from "./HeaderLogo.styled";
 class HeaderLogo extends PureComponent {
 	render() {
 		return (
-			<StyledLink to="/">
+			<StyledLink to="/Scandiweb/">
 				<LogoSvg />
 			</StyledLink>
 		);
