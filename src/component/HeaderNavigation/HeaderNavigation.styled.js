@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export const List = styled.ul`
 	display: flex;
+	list-style-type: none;
 	cursor: pointer;
 `;
 

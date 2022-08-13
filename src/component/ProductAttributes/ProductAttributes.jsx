@@ -1,13 +1,13 @@
 import { PureComponent } from "react";
 
-import { Attribute, Name, Items, Item, ItemSwatch } from "./ProductAttributes.styled";
+import { List, Attribute, Name, Items, Item, ItemSwatch } from "./ProductAttributes.styled";
 
 export class ProductAttributes extends PureComponent {
 	render() {
 		const { attributes, currentAttributes, handleClickAttribute, origin, inStock } = this.props;
 
 		return (
-			<ul>
+			<List>
 				{attributes?.map(({ id, name, items, type }) => (
 					<Attribute key={id} origin={origin}>
 						<Name>{name}:</Name>
@@ -37,7 +37,7 @@ export class ProductAttributes extends PureComponent {
 						</Items>
 					</Attribute>
 				))}
-			</ul>
+			</List>
 		);
 	}
 }

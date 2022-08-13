@@ -58,6 +58,7 @@ export const Products = styled.ul`
 	height: 420px;
 	contain: content;
 	display: block;
+	list-style-type: none;
 	overflow: auto;
 	::-webkit-scrollbar {
 		display: none;

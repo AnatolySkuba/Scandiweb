@@ -30,6 +30,7 @@ export const DropdownList = styled.ul`
 	width: 114px;
 	margin-top: 7.5px;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	list-style-type: none;
 `;
 
 export const DropdownItem = styled.li`

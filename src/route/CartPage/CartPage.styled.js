@@ -11,19 +11,20 @@ export const Cart = styled.h2`
 	font-size: 32px;
 	line-height: 40px;
 
-	@media screen and (max-width: 1024px) {
+	@media (max-width: 1024px) {
 		font-size: calc(32 / 1024 * 100vw);
 		padding-top: calc(80 / 1024 * 100vw);
 		margin-bottom: calc(55 / 1024 * 100vw);
 	}
 
-	@media screen and (max-width: 768px) {
+	@media (max-width: 768px) {
 		font-size: 24px;
 	}
 `;
 
 export const Products = styled.ul`
 	margin-bottom: 32px;
+	list-style-type: none;
 `;
 
 export const TaxQuantity = styled.p`
@@ -32,11 +33,11 @@ export const TaxQuantity = styled.p`
 	font-size: 24px;
 	line-height: 28px;
 
-	@media screen and (max-width: 1024px) {
+	@media (max-width: 1024px) {
 		font-size: calc(24 / 1024 * 100vw);
 	}
 
-	@media screen and (max-width: 768px) {
+	@media (max-width: 768px) {
 		font-size: 18px;
 	}
 `;
@@ -46,11 +47,11 @@ export const Total = styled.p`
 	font-size: 24px;
 	line-height: 28px;
 
-	@media screen and (max-width: 1024px) {
+	@media (max-width: 1024px) {
 		font-size: calc(24 / 1024 * 100vw);
 	}
 
-	@media screen and (max-width: 768px) {
+	@media (max-width: 768px) {
 		font-size: 18px;
 	}
 `;
@@ -61,11 +62,11 @@ export const TaxQuantityValue = styled.span`
 	font-size: 24px;
 	line-height: 24px;
 
-	@media screen and (max-width: 1024px) {
+	@media (max-width: 1024px) {
 		font-size: calc(24 / 1024 * 100vw);
 	}
 
-	@media screen and (max-width: 768px) {
+	@media (max-width: 768px) {
 		font-size: 18px;
 	}
 `;

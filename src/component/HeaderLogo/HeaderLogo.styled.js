@@ -7,11 +7,11 @@ export const StyledLink = styled(Link)`
 	left: 50%;
 	transform: translate(-50%, 0);
 
-	@media screen and (max-width: 485px) {
+	@media (max-width: 485px) {
 		left: 230px;
 	}
 
-	@media screen and (max-width: 380px) {
+	@media (max-width: 380px) {
 		display: none;
 	}
 `;

@@ -87,7 +87,6 @@ export class CartProduct extends PureComponent {
 	render() {
 		const { brand, name, prices, attributes, currentAttributes, currentCurrency, gallery, origin } = this.props;
 		const amount = prices?.find(({ currency }) => currency.symbol === currentCurrency);
-		const currentAmount = (amount?.amount * this.state.quantity).toFixed(2);
 
 		return (
 			<Container origin={origin}>
@@ -96,7 +95,7 @@ export class CartProduct extends PureComponent {
 					<Name>{name}</Name>
 					<PriceValue>
 						{currentCurrency}
-						{currentAmount}
+						{amount.amount}
 					</PriceValue>
 					<ProductAttributes
 						attributes={attributes}

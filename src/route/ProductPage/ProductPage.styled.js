@@ -5,16 +5,17 @@ export const GalleryList = styled.ul`
 	width: 79px;
 	min-inline-size: max-content;
 	display: block;
+	list-style-type: none;
 	overflow: auto;
 	::-webkit-scrollbar {
 		display: none;
 	}
 
-	@media screen and (max-width: 1190px) {
+	@media (max-width: 1190px) {
 		height: calc(511 / 1190 * 100vw);
 	}
 
-	@media screen and (max-width: 720px) {
+	@media (max-width: 720px) {
 		margin: auto;
 	}
 `;
@@ -23,7 +24,7 @@ export const GalleryItem = styled.li`
 	width: 79px;
 	height: 80px;
 	cursor: pointer;
-	
+
 	&: not(: last-child) {
 		margin-bottom: 40px;
 	} ;
@@ -39,7 +40,7 @@ export const Box = styled.div`
 	position: relative;
 	height: 511px;
 
-	@media screen and (max-width: 1190px) {
+	@media (max-width: 1190px) {
 		height: calc(511 / 1190 * 100vw);
 	}
 `;
@@ -50,12 +51,12 @@ export const ImageMain = styled.img`
 	height: 511px;
 	object-fit: contain;
 
-	@media screen and (max-width: 1190px) {
+	@media (max-width: 1190px) {
 		width: calc(610 / 1190 * 90vw);
 		height: calc(511 / 1190 * 90vw);
 	}
 
-	@media screen and (min-width: 1300px) {
+	@media (min-width: 1300px) {
 		margin: 0 100px 0 40px;
 	}
 `;
@@ -64,7 +65,7 @@ export const ProductDescription = styled.div`
 	display: flex;
 	flex-direction: column;
 
-	@media screen and (max-width: 720px) {
+	@media (max-width: 720px) {
 		margin: auto;
 	}
 `;
@@ -75,11 +76,11 @@ export const Brand = styled.h3`
 	font-size: 30px;
 	line-height: 27px;
 
-	@media screen and (max-width: 1024px) {
+	@media (max-width: 1024px) {
 		font-size: calc(30 / 1024 * 100vw);
 	}
 
-	@media screen and (max-width: 720px) {
+	@media (max-width: 720px) {
 		margin-top: 16px;
 		font-size: 30px;
 	}
@@ -91,11 +92,11 @@ export const Name = styled.p`
 	font-size: 30px;
 	line-height: 27px;
 
-	@media screen and (max-width: 1024px) {
+	@media (max-width: 1024px) {
 		font-size: calc(30 / 1024 * 100vw);
 	}
 
-	@media screen and (max-width: 720px) {
+	@media (max-width: 720px) {
 		margin-bottom: 10px;
 		font-size: 30px;
 	}
@@ -107,11 +108,11 @@ export const Price = styled.p`
 	font-size: 18px;
 	line-height: 18px;
 
-	@media screen and (max-width: 1024px) {
+	@media (max-width: 1024px) {
 		font-size: calc(18 / 1024 * 100vw);
 	}
 
-	@media screen and (max-width: 720px) {
+	@media (max-width: 720px) {
 		margin: 18px 0 10px;
 		font-size: 18px;
 	}
@@ -123,11 +124,11 @@ export const PriceValue = styled.p`
 	font-size: 24px;
 	line-height: 18px;
 
-	@media screen and (max-width: 1024px) {
+	@media (max-width: 1024px) {
 		font-size: calc(24 / 1024 * 100vw);
 	}
 
-	@media screen and (max-width: 720px) {
+	@media (max-width: 720px) {
 		font-size: 24px;
 	}
 `;
@@ -142,7 +143,7 @@ export const Button = styled.button`
 	background-color: var(--accent-color);
 	border: 0;
 
-	@media screen and (max-width: 720px) {
+	@media (max-width: 720px) {
 		margin-bottom: 20px;
 	}
 `;
@@ -155,16 +156,16 @@ export const Description = styled.p`
 	font-size: 16px;
 	line-height: 159.96%;
 
-	@media screen and (max-width: 1024px) {
+	@media (max-width: 1024px) {
 		top: 591px;
 	}
 
-	@media screen and (max-width: 720px) {
+	@media (max-width: 720px) {
 		position: static;
 		width: 292px;
 	}
 
-	@media screen and (min-width: 1440px) {
+	@media (min-width: 1440px) {
 		position: static;
 		width: 292px;
 	}
@@ -176,15 +177,15 @@ export const Container = styled.section`
 	padding-top: calc(160 / 1440 * 100vw);
 	opacity: ${({ inStock }) => (inStock ? "1" : "0.5")};
 
-	@media screen and (max-width: 1024px) {
+	@media (max-width: 1024px) {
 		padding-top: 114px;
 	}
 
-	@media screen and (max-width: 720px) {
+	@media (max-width: 720px) {
 		flex-wrap: wrap;
 	}
 
-	@media screen and (min-width: 1440px) {
+	@media (min-width: 1440px) {
 		padding-top: 160px;
 	}
 
@@ -202,7 +203,7 @@ export const OutOfStock = styled.p`
 	font-size: calc(24 / 1440 * 100vw);
 	line-height: 38.4px;
 
-	@media screen and (min-width: 1300px) {
+	@media (min-width: 1300px) {
 		margin-left: -40px;
 		font-size: 24px;
 	}

@@ -75,7 +75,7 @@ export const Container = styled.li`
 		border-bottom: ${props => (props.origin === "page" ? "1px solid #e5e5e5" : "0")};
 	}
 
-	@media screen and (max-width: 1024px) {
+	@media (max-width: 1024px) {
 		padding: ${props => (props.origin === "page" ? "calc(24 / 1024 * 100vw) 0" : "0")};
 	}
 
@@ -89,7 +89,7 @@ export const Container = styled.li`
 		font-size: ${props => (props.origin === "page" ? "30px" : "16px")};
 		line-height: ${props => (props.origin === "page" ? "27px" : "160%")};
 
-		@media screen and (max-width: 1024px) {
+		@media (max-width: 1024px) {
 			font-size: ${props => (props.origin === "page" ? "calc(30 / 1024 * 100vw)" : "16px")};
 		}
 	}
@@ -100,11 +100,11 @@ export const Container = styled.li`
 		font-size: ${props => (props.origin === "page" ? "30px" : "16px")};
 		line-height: ${props => (props.origin === "page" ? "27px" : "160%")};
 
-		@media screen and (max-width: 1024px) {
+		@media (max-width: 1024px) {
 			font-size: ${props => (props.origin === "page" ? "calc(30 / 1024 * 100vw)" : "16px")};
 		}
 
-		@media screen and (min-width: 1440px) {
+		@media (min-width: 1440px) {
 			margin: ${props => (props.origin === "page" ? "16px 0 20px" : "0 0 4px")};
 		}
 	}
@@ -115,11 +115,11 @@ export const Container = styled.li`
 		font-size: ${props => (props.origin === "page" ? "24px" : "16px")};
 		line-height: ${props => (props.origin === "page" ? "24px" : "160%")};
 
-		@media screen and (max-width: 1024px) {
+		@media (max-width: 1024px) {
 			font-size: ${props => (props.origin === "page" ? "calc(24 / 1024 * 100vw)" : "16px")};
 		}
 
-		@media screen and (min-width: 1440px) {
+		@media (min-width: 1440px) {
 			margin: ${props => (props.origin === "page" ? "16px 0 20px" : "0 0 4px")};
 		}
 	}
@@ -136,7 +136,7 @@ export const Container = styled.li`
 		font-size: ${props => (props.origin === "page" ? "20px" : "15px")};
 		line-height: ${props => (props.origin === "page" ? "43px" : "")};
 
-		@media screen and (max-width: 1024px) {
+		@media (max-width: 1024px) {
 			width: ${props => (props.origin === "page" ? "calc(45 / 1024 * 100vw)" : "24px")};
 			height: ${props => (props.origin === "page" ? "calc(45 / 1024 * 100vw)" : "24px")};
 			line-height: ${props => (props.origin === "page" ? "calc(43 / 1024 * 100vw)" : "")};
@@ -148,7 +148,7 @@ export const Container = styled.li`
 		height: ${props => (props.origin === "page" ? "288px" : "190px")};
 		align-self: center;
 
-		@media screen and (max-width: 1024px) {
+		@media (max-width: 1024px) {
 			width: ${props => (props.origin === "page" ? "calc(200 / 1024 * 100vw)" : "121px")};
 			height: ${props => (props.origin === "page" ? "calc(288 / 1024 * 100vw)" : "190px")};
 		}

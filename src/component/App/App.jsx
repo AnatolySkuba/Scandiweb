@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Header from "component/Header";
 
-const CategoryPage = lazy(() => import("route/CategoryPage" /* webpackChunkName: "CategoryPage" */));
+const ProductListPage = lazy(() => import("route/ProductListPage" /* webpackChunkName: "ProductListPage" */));
 const ProductPage = lazy(() => import("route/ProductPage" /* webpackChunkName: "ProductPage" */));
 const CartPage = lazy(() => import("route/CartPage" /* webpackChunkName: "CartPage" */));
 
@@ -14,8 +14,8 @@ class App extends PureComponent {
 				<Suspense fallback={<Header />}>
 					<Routes>
 						<Route path="/Scandiweb/" element={<Header />}>
-							<Route index element={<CategoryPage />} />
-							<Route path="category/:category" element={<CategoryPage />} />
+							<Route index element={<ProductListPage />} />
+							<Route path="category/:category" element={<ProductListPage />} />
 							<Route path="product/:productId" element={<ProductPage />} />
 							<Route path="cart" element={<CartPage />} />
 						</Route>
