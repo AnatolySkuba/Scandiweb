@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Scandiweb/static/css/main.f8b1f9cd.css",
-    "main.js": "/Scandiweb/static/js/main.062f78b2.js",
-    "ProductListPage.js": "/Scandiweb/static/js/ProductListPage.00341923.chunk.js",
-    "ProductPage.js": "/Scandiweb/static/js/ProductPage.dfbf8c15.chunk.js",
-    "CartPage.js": "/Scandiweb/static/js/CartPage.d75aec48.chunk.js",
-    "static/js/703.dee42df2.chunk.js": "/Scandiweb/static/js/703.dee42df2.chunk.js",
-    "static/media/logo.svg": "/Scandiweb/static/media/logo.5d12b4faf427c0c1570ba07ef816045d.svg",
-    "static/media/cart.svg": "/Scandiweb/static/media/cart.a9875b99a8cd4fcabc1b6f2e560b0271.svg",
-    "index.html": "/Scandiweb/index.html",
-    "static/media/arrow.svg": "/Scandiweb/static/media/arrow.192e40a3df071a0eeae5d2f8b042497e.svg",
-    "main.f8b1f9cd.css.map": "/Scandiweb/static/css/main.f8b1f9cd.css.map",
-    "main.062f78b2.js.map": "/Scandiweb/static/js/main.062f78b2.js.map",
-    "ProductListPage.00341923.chunk.js.map": "/Scandiweb/static/js/ProductListPage.00341923.chunk.js.map",
-    "ProductPage.dfbf8c15.chunk.js.map": "/Scandiweb/static/js/ProductPage.dfbf8c15.chunk.js.map",
-    "CartPage.d75aec48.chunk.js.map": "/Scandiweb/static/js/CartPage.d75aec48.chunk.js.map",
-    "703.dee42df2.chunk.js.map": "/Scandiweb/static/js/703.dee42df2.chunk.js.map"
+    "main.css": "/static/css/main.f8b1f9cd.css",
+    "main.js": "/static/js/main.b6ff207c.js",
+    "ProductListPage.js": "/static/js/ProductListPage.643a0384.chunk.js",
+    "ProductPage.js": "/static/js/ProductPage.dfbf8c15.chunk.js",
+    "CartPage.js": "/static/js/CartPage.d75aec48.chunk.js",
+    "static/js/703.dee42df2.chunk.js": "/static/js/703.dee42df2.chunk.js",
+    "static/media/logo.svg": "/static/media/logo.5d12b4faf427c0c1570ba07ef816045d.svg",
+    "static/media/cart.svg": "/static/media/cart.a9875b99a8cd4fcabc1b6f2e560b0271.svg",
+    "index.html": "/index.html",
+    "static/media/arrow.svg": "/static/media/arrow.192e40a3df071a0eeae5d2f8b042497e.svg",
+    "main.f8b1f9cd.css.map": "/static/css/main.f8b1f9cd.css.map",
+    "main.b6ff207c.js.map": "/static/js/main.b6ff207c.js.map",
+    "ProductListPage.643a0384.chunk.js.map": "/static/js/ProductListPage.643a0384.chunk.js.map",
+    "ProductPage.dfbf8c15.chunk.js.map": "/static/js/ProductPage.dfbf8c15.chunk.js.map",
+    "CartPage.d75aec48.chunk.js.map": "/static/js/CartPage.d75aec48.chunk.js.map",
+    "703.dee42df2.chunk.js.map": "/static/js/703.dee42df2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f8b1f9cd.css",
-    "static/js/main.062f78b2.js"
+    "static/js/main.b6ff207c.js"
   ]
 }
